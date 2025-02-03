@@ -1048,7 +1048,9 @@ class ExperimentMethod(QtWidgets.QWidget):
             self.main.controller.pump4.setHidden(False)
             self.main.controller.pump5.setHidden(False)
             self.main.controller.pump6.setHidden(False)
-            self.main.controller.pump10.setHidden(False)
+            self.main.controller.pump10.setHidden(False)            
+            if self.monomerRatioCheckBox.isChecked():
+                self.main.controller.pump3.setHidden(False)
 
         self.variablesDict.update(self.flowRates)
         
